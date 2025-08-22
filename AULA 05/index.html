@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+</head>
+<body>
+    <h1>Gerenciador de Tarefas</h1>
+    <p>Este programa permite gerenciar suas tarefas usando prompts e alerts.</p>
+    
+    <script>
+        // Array para armazenar as tarefas
+        let tarefas = [];
+        let executando = true;
+        
+        // Loop principal do programa
+        while (executando) {
+            // Solicitar opção do usuário
+            let opcao = prompt(
+                "GERENCIADOR DE TAREFAS\n\n" +
+                "Escolha uma opção:\n" +
+                "1 - Adicionar tarefa\n" +
+                "2 - Listar tarefas\n" +
+                "3 - Remover tarefa\n" +
+                "4 - Concluir tarefa\n" +
+                "0 - Sair\n\n" +
+                "Digite o número da opção:"
+            );
+            
+            // Processar a opção escolhida
+            if (opcao === "1") {
+                // Adicionar tarefa
+                let novaTarefa = prompt("Digite o nome da tarefa:");
+                if (novaTarefa && novaTarefa.trim() !== "") {
+                    tarefas.push(novaTarefa.trim());
+                    alert('Tarefa "' + novaTarefa + '" adicionada com sucesso!');
+                } else {
+                    alert("Nome da tarefa não pode estar vazio!");
+                }
+            } 
+            else if (opcao === "2") {
+                // Listar tarefas
+                if (tarefas.length === 0) {
+                    alert("Nenhuma tarefa cadastrada.");
+                } else {
+                    let lista = "LISTA DE TAREFAS:\n\n";
+                    for (let i = 0; i < tarefas.length; i++) {
+                        lista += (i + 1) + ". " + tarefas[i] + "\n";
+                    }
+                    alert(lista);
+                }
+            } 
+            else if (opcao === "3") {
+                // Remover tarefa
+                if (tarefas.length === 0) {
+                    alert("Não há tarefas para remover.");
+                } else {
+                    let lista = "Selecione a tarefa a ser removida:\n\n";
+                    for (let i = 0; i < tarefas.length; i++) {
+                        lista += (i + 1) + ". " + tarefas[i] + "\n";
+                    }
+                    
+                    let indice = parseInt(prompt(lista + "\nDigite o número da tarefa:")) - 1;
+                    
+                    if (indice >= 0 && indice < tarefas.length) {
+                        let tarefaRemovida = tarefas.splice(indice, 1)[0];
+                        alert('Tarefa "' + tarefaRemovida + '" removida com sucesso!');
+                    } else {
+                        alert("Índice inválido!");
+                    }
+                }
+            } 
+            else if (opcao === "4") {
+                // Concluir tarefa
+                if (tarefas.length === 0) {
+                    alert("Não há tarefas para concluir.");
+                } else {
+                    let lista = "Selecione a tarefa a ser concluída:\n\n";
+                    for (let i = 0; i < tarefas.length; i++) {
+                        lista += (i + 1) + ". " + tarefas[i] + "\n";
+                    }
+                    
+                    let indice = parseInt(prompt(lista + "\nDigite o número da tarefa:")) - 1;
+                    
+                    if (indice >= 0 && indice < tarefas.length) {
+                        if (tarefas[indice].indexOf("✅ ") === -1) {
+                            tarefas[indice] = "✅ " + tarefas[indice];
+                            alert("Tarefa marcada como concluída!");
+                        } else {
+                            alert("Esta tarefa já está concluída.");
+                        }
+                    } else {
+                        alert("Índice inválido!");
+                    }
+                }
+            } 
+            else if (opcao === "0") {
+                // Sair do programa
+                alert("Obrigado por usar o Gerenciador de Tarefas! Até logo!");
+                executando = false;
+            } 
+            else {
+                alert("Opção inválida! Escolha entre 0 e 4.");
+            }
+        }
+    </script>
+</body>
+</html>
