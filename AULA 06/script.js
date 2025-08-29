@@ -150,9 +150,9 @@
 
 // arroy function é isso: () => {}
 
-const somar = (a,b) => a + b;
-console.log(somar(43,956))
+// const somar = (a,b) => a + b;
+// console.log(somar(43,956))
 
-const filtrarPares = (int) => {if (int %2 == 0) {console.log("é par")} else {console.log("é impar")}}
+const filtrarPares = (int) => {if (int %2 === 0) {console.log("é par")} else {console.log("é impar")}}
 
-console.log(filtrarPares(7))
+filtrarPares(7)
