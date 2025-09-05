@@ -105,4 +105,10 @@ if(numbers.every(number => number > 0)) {
 } else {
     let nega = numbers.filter(number => number <= 0)
     console.log(`Estes números ${nega} são negativos ou nulos`)
+
 }
+
+const nomes = ['Ana', 'Caio', 'João', 'Edu']
+const todosComA = nomes.every(nome => nome.includes("a"));
+
+console.log(todosComA);
