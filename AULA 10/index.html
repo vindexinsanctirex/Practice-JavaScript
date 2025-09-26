@@ -1,0 +1,83 @@
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guia de Aula: DOM — Manipulação do Document Object Model</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>Guia de Aula: DOM</h1>
+      <p class="subtitle">Entenda, explore e pratique a manipulação do Document Object Model</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="toc">
+      <h2 id="tituloIndice">Índice</h2>
+      <ol>
+        <li><a href="#objetivos" class="itensIndice">Objetivos de aprendizagem</a></li>
+        <li><a href="#conceitos" class="itensIndice">Conceitos chave</a></li>
+        <li><a href="#exemplos" class="itensIndice">Exemplos práticos</a></li>
+        <li><a href="#exercicios" class="itensIndice">Exercícios</a></li>
+        <li><a href="#avaliacao" class="itensIndice">Sugestão de avaliação</a></li>
+        <li><a href="#recursos" class="itensIndice">Recursos adicionais</a></li>
+      </ol>
+
+      <button class="button button-success">Sobre</button>
+    </nav>
+
+    <section id="objetivos">
+      <h2 id="objetivosTitulo">Objetivos de aprendizagem</h2>
+      <ul>
+        <li>Compreender o que é o DOM e como ele representa uma página HTML.</li>
+        <li>Selecionar elementos do DOM usando diferentes APIs (querySelector, getElementById, etc.).</li>
+        <li>Modificar conteúdo, atributos, classes e estilos dinamicamente.</li>
+        <li>Adicionar e remover elementos do DOM.</li>
+        <li>Lidar com eventos e callbacks (click, input, submit).</li>
+      </ul>
+    </section>
+
+    <section id="conceitos">
+      <h2>Conceitos chave</h2>
+      <dl>
+        <dt>Árvore do DOM</dt>
+        <dd>O DOM é uma representação em árvore do documento HTML — cada elemento é um nó que pode ser lido e alterado.</dd>
+
+        <dt>Seletores</dt>
+        <dd>querySelector, querySelectorAll, getElementById, getElementsByClassName e getElementsByTagName.</dd>
+
+        <dt>Manipulação</dt>
+        <dd>textContent, innerHTML, setAttribute, classList, style, appendChild, removeChild e replaceChild.</dd>
+
+        <dt>Eventos</dt>
+        <dd>addEventListener, event object, propagation (bubbling/capturing) e preventDefault/stopPropagation.</dd>
+      </dl>
+    </section>
+
+    <section id="exercicios">
+      <h2>Exercícios</h2>
+      <ol id="numeracao">
+        <li>Selecione o terceiro item da lista e mude seu texto para algo criativo.</li>
+        <li>Crie um contador que mostre quantos itens existem na lista e atualize-o quando a lista mudar.</li>
+        <li>Implemente a edição inline de um item da lista (clique duas vezes para editar).</li>
+        <li>Evite que um formulário recarregue a página ao enviar e capture os dados via JS.</li>
+      </ol>
+    </section>
+
+    <section id="avaliacao">
+      <h2>Sugestão de avaliação</h2>
+      <p>Pequeno projeto: criar um TODO app que permita adicionar, editar, remover e persistir itens em localStorage. Critérios: funcionamento (70%), semântica HTML (15%), estilo e UX (15%).</p>
+    </section>
+
+    <footer class="footer">
+      <p>Henrique Venâncio</p>
+      <a id="link" href="https://www.github.com">Github</a>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

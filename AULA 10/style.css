@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background: #fff;
+    color: #000;
+    padding-bottom: 3rem
+}
+
+.wrap {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem
+}
+
+
+header.hero {
+    text-align: center;
+    margin-bottom: 2rem
+}
+
+header.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem
+}
+
+header.hero .subtitle {
+    color: #444;
+    font-size: 1rem
+}
+
+header.hero .meta {
+    color: #666;
+    font-size: 0.85rem;
+    margin-top: 0.25rem
+}
+
+
+nav.toc {
+    padding: 1rem;
+    margin-bottom: 1rem
+}
+
+nav.toc h2 {
+    margin-bottom: 0.5rem
+}
+
+
+section {
+    margin: 1.5rem 0;
+    padding: 1rem;
+
+}
+
+section h2 {
+    margin-bottom: 0.75rem
+}
+
+
+.card {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background: #f9f9f9
+}
+
+.card pre {
+    background: #eee;
+    padding: 0.5rem;
+    overflow-x: auto
+}
+
+
+.demo {
+
+    padding: 0.75rem;
+    margin-top: 1rem
+}
+
+.demo-area {
+    margin-top: 0.5rem
+}
+
+.demo-area input {
+    padding: 0.4rem;
+
+    margin-bottom: 0.5rem;
+    width: 100%
+}
+
+.demo-area button {
+    margin-right: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: #fff;
+    cursor: pointer
+}
+
+.demo-list {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem
+}
+
+
+.btn-small {
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.8rem
+}
+
+
+.footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #333;
+    margin-top: 2rem
+}
+
+.itensIndice {
+    color: red;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* "Subclasse" */
+.button-primary {
+    background-color: blue;
+    color: white;
+}
+
+.button-success {
+    background-color: green;
+    color: white;
+}
