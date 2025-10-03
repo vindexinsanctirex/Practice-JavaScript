@@ -45,10 +45,28 @@
 //     container.appendChild(paragrafo);
 // })
 
-const container = document.getElementById('container');
+// const container = document.getElementById('container');
 
-container.addEventListener('mousemove', function(event) {
+// container.addEventListener('mousemove', function(event) {
+//     let paragrafo = document.createElement('p');
+//     paragrafo.textContent = `Coordenadas = (${event.x}, ${event.y})`;
+//     container.appendChild(paragrafo);
+// })
+
+// const link = document.getElementById('a');
+
+// link.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     alert('Link Impedido')
+// })
+
+const form = document.getElementById('form');
+const btn = document.getElementById('btn');
+
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    let mensagem = document.getElementById('mensagem').value;
     let paragrafo = document.createElement('p');
-    paragrafo.textContent = `Coordenadas = (${event.x}, ${event.y})`;
-    container.appendChild(paragrafo);
+    paragrafo.textContent = mensagem;
+    document.body.appendChild(paragrafo);
 })
