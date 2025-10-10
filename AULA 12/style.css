@@ -1,0 +1,74 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--font-size);
+    margin: 0;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #3a5a8a;
+}
+
+.content {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Temas */
+.dark {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+}
+
+/* Tamanhos */
+.small {
+    --font-size: 14px;
+}
+
+.medium {
+    --font-size: 16px;
+}
+
+.large {
+    --font-size: 18px;
+}
