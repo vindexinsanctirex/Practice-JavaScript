@@ -59,35 +59,94 @@
 //         console.error('Erro ao buscar os dados:', error);
 //     });
 
-    function renderHtml(data) {
-        const body = document.body;
-        body.innerHTML = JSON.stringify(data);
-    }
+// function renderHtml(data) {
+//     const body = document.body;
+//     body.innerHTML = JSON.stringify(data);
+// }
 
 // criar input pra o usuário digitar o CEP
 // criar botão para buscar o CEP
 // ao clicar no botão, buscar o CEP digitado pelo usuário
 // exibir os dados do CEP na tela
 
-const inputCep = document.createElement("input");
-inputCep.type = "text";
-inputCep.id = "cepInput";
-inputCep.placeholder = "Digite o CEP";
+// const inputCep = document.createElement("input");
+// inputCep.type = "text";
+// inputCep.id = "cepInput";
+// inputCep.placeholder = "Digite o CEP";
 
-const buttonBuscar = document.createElement("button");
-buttonBuscar.innerText = "Buscar CEP";
+// const buttonBuscar = document.createElement("button");
+// buttonBuscar.innerText = "Buscar CEP";
 
-document.body.appendChild(inputCep);
-document.body.appendChild(buttonBuscar);
+// document.body.appendChild(inputCep);
+// document.body.appendChild(buttonBuscar);
 
-buttonBuscar.addEventListener("click", () => {
-    const cep = inputCep.value;
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(response => response.json())
-        .then(data => {
-            renderHtml(data);
-        })
-        .catch(error => {
-            console.error('Erro ao buscar os dados:', error);
-        });
-}); 
+// buttonBuscar.addEventListener("click", () => {
+//     const cep = inputCep.value;
+//     fetch(`https://viacep.com.br/ws/${cep}/json/`)
+//         .then(response => response.json())
+//         .then(data => {
+//             renderHtml(data);
+//         })
+//         .catch(error => {
+//             console.error('Erro ao buscar os dados:', error);
+//         });
+// });
+
+// const URL = "https://jsonplaceholder.typicode.com/posts";
+
+// fetch(URL, {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify({
+//     title: "ISILDUR",
+//     body: "CAST THE RING INO THE FIRE",
+//     userId: 1,
+//   }),
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log("Resposta da API:", data);
+//   })
+//   .catch((error) => {
+//     console.error("Erro ao fazer a requisição:", error);
+//   });
+
+// async function enviarDados() {
+
+//     try {
+//     const response = await fetch(URL, {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//             title: "ISILDUR",
+//             body: "CAST THE RING INO THE FIRE",
+//             userId: 1,
+//         }),
+//     });
+
+//     const data = await response.json();
+//     console.log("Resposta da API (async/await):", data);
+//     } catch (error) {
+//     console.error("Erro ao fazer a requisição (async/await):", error);
+//     }
+// }
+
+// enviarDados();
+
+const URL = "https://jsonplaceholder.typicode.com/users";
+
+async function buscarUsuarios() {
+    try {
+        const response = await fetch(URL);
+        const data = await response.json();
+        console.log("Usuários buscados (async/await):", data);
+    } catch (error) {
+        console.error("Erro ao buscar os usuários (async/await):", error);
+    }
+}
+
+buscarUsuarios();
