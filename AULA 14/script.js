@@ -139,14 +139,45 @@
 
 const URL = "https://jsonplaceholder.typicode.com/users";
 
-async function buscarUsuarios() {
+// async function buscarUsuarios() {
+//     try {
+//         const response = await fetch(URL);
+//         const data = await response.json();
+//         console.log("Usuários buscados (async/await):", data);
+//     } catch (error) {
+//         console.error("Erro ao buscar os usuários (async/await):", error);
+//     }
+// }
+
+// buscarUsuarios();
+
+// buscar apenas os nomes dos usuários e exibir na tela
+async function buscarNomesUsuarios() {
     try {
         const response = await fetch(URL);
         const data = await response.json();
-        console.log("Usuários buscados (async/await):", data);
+        const nomes = data.map(user => user.name);
+        console.log("Nomes dos usuários:", nomes);
     } catch (error) {
-        console.error("Erro ao buscar os usuários (async/await):", error);
+        console.error("Erro ao buscar os nomes dos usuários:", error);
     }
 }
 
-buscarUsuarios();
+buscarNomesUsuarios();
+
+// buscar apenas os nomes dos usuários e exibir na tela em uma lista usando apenas for each, sem map
+async function buscarNomesUsuariosLista() {
+    try {
+        const response = await fetch(URL);
+        const data = await response.json();
+        const nomes = [];
+        data.forEach(user => {
+            nomes.push(user.name);
+        });
+        console.log("Nomes dos usuários (forEach):", nomes);
+    } catch (error) {
+        console.error("Erro ao buscar os nomes dos usuários (forEach):", error);
+    }
+}
+
+buscarNomesUsuariosLista();
