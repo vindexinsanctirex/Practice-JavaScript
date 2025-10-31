@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Produtos</h1>
+        
+        <div class="controls">
+            <button id="btnAnterior" class="btn">← Anterior</button>
+            <span id="contador" class="contador">Página 1</span>
+            <button id="btnProximo" class="btn">Próximo →</button>
+        </div>
+
+        <div id="loading" class="loading">Carregando produtos...</div>
+        
+        <div id="produtosContainer" class="produtos-container">
+            <!-- Os produtos serão inseridos aqui via JavaScript -->
+        </div>
+
+        <div id="semProdutos" class="sem-produtos" style="display: none;">
+            Nenhum produto encontrado.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
